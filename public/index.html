@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+</head>
+<body>
+  <header>
+  <nav>
+    <a href="/" class="brand">💵 Converter</a>
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="card">
+    <h1>Currency Converter</h1>
+    <p class="subtitle">Fixed exchange rates: USD, EUR, RUB</p>
+
+    <form id="convert-form">
+      <label>
+        Amount
+        <input name="amount" type="number" step="any" placeholder="e.g. 100" required>
+      </label>
+
+      <div class="row">
+        <label>
+          From
+          <select name="from">
+            <option>USD</option>
+            <option>EUR</option>
+            <option>RUB</option>
+          </select>
+        </label>
+        <span class="arrow">→</span>
+        <label>
+          To
+          <select name="to">
+            <option>EUR</option>
+            <option>RUB</option>
+            <option>USD</option>
+          </select>
+        </label>
+      </div>
+
+      <button type="submit">Convert</button>
+    </form>
+
+    <p id="result" class="result"></p>
+  </section>
+</main>
+  <script src="/app.js"></script>
+</body>
+</html>
